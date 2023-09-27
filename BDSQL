@@ -1,0 +1,39 @@
+# Estrutura do banco de dados SQL
+
+-- Tabela Pessoas
+CREATE TABLE Pessoas (
+    Nome VARCHAR(100),
+    CPF VARCHAR(11),
+    Email VARCHAR(90),
+    Telefone VARCHAR(15)
+);
+
+-- Tabela Funcionario
+CREATE TABLE Funcionario (
+    Registro VARCHAR(20) PRIMARY KEY,
+    IdFuncionario INTEGER
+);
+
+-- Tabela Cliente
+CREATE TABLE Cliente (
+    IdCliente INTEGER PRIMARY KEY
+);
+
+-- Tabela Veiculo
+CREATE TABLE Veiculo (
+    IdCarro INTEGER PRIMARY KEY,
+    Modelo VARCHAR(255),
+    Placa VARCHAR(10),
+    Cor VARCHAR(50)
+);
+
+-- Tabela Estacionamento
+CREATE TABLE Estacionamento (
+    IdFuncionario INTEGER,
+    IdCliente INTEGER,
+    IdCarro INTEGER,
+    NumeroDeVaga INTEGER PRIMARY KEY,
+    EntradaDeVeiculo INTEGER,
+    SaidaDeVeiculo INTEGER,
+    ValorTotal DOUBLE PRECISION
+);
